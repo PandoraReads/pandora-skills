@@ -8,20 +8,20 @@
 
 | 技能 | 解决的问题 |
 | --- | --- |
-| [`pandora-onboard`](.agents/skills/pandora-onboard/SKILL.md) | 确认并绑定 Obsidian 仓库路径，引导首次使用 |
-| [`pandora-triage`](.agents/skills/pandora-triage/SKILL.md) | 整理收集箱，按实际用途分流原件 |
-| [`pandora-plan`](.agents/skills/pandora-plan/SKILL.md) | 规划愿景、领域、年度目标、项目和心愿 |
-| [`pandora-ingest`](.agents/skills/pandora-ingest/SKILL.md) | 从收集箱或资源摄入可追溯的 LLM-Wiki |
-| [`pandora-query`](.agents/skills/pandora-query/SKILL.md) | 跨 PARA 与 Wiki 检索，并回到原文核对 |
-| [`pandora-lint`](.agents/skills/pandora-lint/SKILL.md) | 检查属性、目录、双链及 Wiki 来源链 |
-| [`pandora-review`](.agents/skills/pandora-review/SKILL.md) | 做周回顾与年度复盘 |
-| [`pandora-archive`](.agents/skills/pandora-archive/SKILL.md) | 归档或恢复项目与笔记，维护关系和记录 |
+| [`pandora-onboard`](skills/pandora-onboard/SKILL.md) | 确认并绑定 Obsidian 仓库路径，引导首次使用 |
+| [`pandora-triage`](skills/pandora-triage/SKILL.md) | 整理收集箱，按实际用途分流原件 |
+| [`pandora-plan`](skills/pandora-plan/SKILL.md) | 规划愿景、领域、年度目标、项目和心愿 |
+| [`pandora-ingest`](skills/pandora-ingest/SKILL.md) | 从收集箱或资源摄入可追溯的 LLM-Wiki |
+| [`pandora-query`](skills/pandora-query/SKILL.md) | 跨 PARA 与 Wiki 检索，并回到原文核对 |
+| [`pandora-lint`](skills/pandora-lint/SKILL.md) | 检查属性、目录、双链及 Wiki 来源链 |
+| [`pandora-review`](skills/pandora-review/SKILL.md) | 做周回顾与年度复盘 |
+| [`pandora-archive`](skills/pandora-archive/SKILL.md) | 归档或恢复项目与笔记，维护关系和记录 |
 
 ## 如何使用
 
 这些技能按《潘多拉的数字花园·第二大脑》的目录、属性和模板约定编写。它们不是一个空仓库生成器；单独下载后，需要先接入满足相应约定的 Obsidian 仓库。依赖与安装步骤见[接入说明](docs/integration.md)。
 
-将 `.agents/skills/pandora-*` 与 `.agents/scripts/bind_vault.py` 放入目标仓库的相同相对路径后，先运行 `pandora-onboard`，由它确认实际仓库路径并检查所需结构。复制或搬迁仓库后重新绑定路径。之后可以按名称调用，例如 `$pandora-triage`、`$pandora-query`。
+本仓库首页的 [`skills/`](skills/) 直接展示全部技能，[`scripts/`](scripts/) 保存路径绑定脚本。接入第二大脑时，将它们分别复制到目标 Obsidian 仓库的 `.agents/skills/` 与 `.agents/scripts/`；先运行 `pandora-onboard`，由它确认实际仓库路径并检查所需结构。复制或搬迁仓库后重新绑定路径。之后可以按名称调用，例如 `$pandora-triage`、`$pandora-query`。
 
 ## 关于《潘多拉的数字花园·第二大脑》
 

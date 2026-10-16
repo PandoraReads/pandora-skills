@@ -36,7 +36,7 @@ Pandora 技能以 Obsidian 仓库为执行对象。公开仓库提供技能与�
 
 ## 安装与绑定
 
-1. 将本仓库的 `.agents/skills/pandora-*` 和 `.agents/scripts/bind_vault.py` 复制到目标仓库的相同相对路径。
+1. 将本仓库顶层 `skills/pandora-*` 复制到目标仓库的 `.agents/skills/`，将 `scripts/bind_vault.py` 复制到目标仓库的 `.agents/scripts/`。GitHub 仓库本身不需要 `.agents/` 目录。
 2. 确认目标仓库确实是你要使用的副本，再运行 `pandora-onboard`。它会要求你提供仓库的绝对路径。
 3. 在目标仓库中执行：
 
