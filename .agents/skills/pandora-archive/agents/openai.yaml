@@ -1,0 +1,6 @@
+"interface":
+  "display_name": "第二大脑归档恢复"
+  "short_description": "按用户明确指令归档或恢复第二大脑项目与笔记，保留可复用资料、属性关系及移动记录；仅询问候选时不执行移动。"
+  "default_prompt": "使用 $pandora-archive，归档指定已结束项目，保留共享资料并核对双链。"
+"policy":
+  "allow_implicit_invocation": !!bool "true"

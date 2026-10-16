@@ -1,0 +1,6 @@
+"interface":
+  "display_name": "第二大脑日周回顾"
+  "short_description": "根据仓库事实执行日回顾或周回顾，检查 收集箱、项目、领域与等待事项，形成可执行选择；不把示范记录当真实成果。"
+  "default_prompt": "使用 $pandora-review，为第二大脑做一次本周回顾，区分事实与建议。"
+"policy":
+  "allow_implicit_invocation": !!bool "true"
