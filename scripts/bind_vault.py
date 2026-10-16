@@ -10,6 +10,10 @@ import sys
 
 MARKER = "仓库根路径（由 pandora-onboard 确认并更新）："
 REQUIRED = ("AGENTS.md", "00 收集箱", "60 工作台", "90 系统/指南/属性字典.md")
+SECOND_BRAIN_SKILLS = (
+    "pandora-onboard", "pandora-triage", "pandora-plan", "pandora-ingest",
+    "pandora-query", "pandora-lint", "pandora-review", "pandora-archive",
+)
 
 
 def main() -> int:
@@ -25,9 +29,10 @@ def main() -> int:
     if not all((vault / item).exists() for item in REQUIRED):
         print("不是有效的 Pandora 仓库根目录：缺少 AGENTS.md、00 收集箱、60 工作台或属性字典", file=sys.stderr)
         return 1
-    skills = sorted((vault / ".agents/skills").glob("pandora-*/SKILL.md"))
-    if len(skills) != 8:
-        print(f"预期 8 个 Pandora 技能，实际找到 {len(skills)} 个", file=sys.stderr)
+    skills = [vault / ".agents/skills" / name / "SKILL.md" for name in SECOND_BRAIN_SKILLS]
+    missing = [skill for skill in skills if not skill.is_file()]
+    if missing:
+        print(f"缺少第二大脑技能：{', '.join(str(skill) for skill in missing)}", file=sys.stderr)
         return 1
     config_path = vault / ".obsidian/plugins/apex-dashboard/data.json"
     try:
