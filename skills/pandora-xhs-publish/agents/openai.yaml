@@ -1,0 +1,4 @@
+"interface":
+  "display_name": "Pandora 小红书发布助手"
+  "short_description": "从 Markdown 填写小红书笔记、配图和相关话题"
+  "default_prompt": "请用 $pandora-xhs-publish 将指定 Markdown 笔记填写到小红书创作者发布页面。"
