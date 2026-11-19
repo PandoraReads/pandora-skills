@@ -39,7 +39,34 @@
 
 第二大脑系列按《潘多拉的数字花园·第二大脑》的目录、属性和模板约定编写。它们不是一个空仓库生成器；单独下载后，需要先接入满足相应约定的 Obsidian 仓库。依赖与安装步骤见[接入说明](docs/integration.md)。学习技能可单独安装；`pandora-dankoe-reading` 可处理用户提供的阅读材料，`pandora-hilight` 需要 HiLighter 插件及用户指定的 Obsidian 仓库，`pandora-socrates-learning` 可直接使用用户提供的学习材料。
 
-本仓库首页的 [`skills/`](skills/) 直接展示全部技能，[`scripts/`](scripts/) 保存第二大脑路径绑定脚本。接入第二大脑时，将该组八个技能复制到目标 Obsidian 仓库的 `.agents/skills/`，并将绑定脚本复制到 `.agents/scripts/`；先运行 `pandora-onboard`，由它确认实际仓库路径并检查所需结构。复制或搬迁仓库后重新绑定路径。之后可以按名称调用，例如 `$pandora-triage`、`$pandora-query`。学习技能可复制到所用 Agent 工具的技能目录并按各自 `SKILL.md` 使用。自媒体技能 `xhs-writer`、`xhs-title-writer`、`pandora-infographic-cards` 可单独复制到所用 Agent 工具的技能目录；使用前把文中的 `{{你的仓库}}` 替换为自己的 Obsidian 仓库根目录。`pandora-infographic-cards` 的渲染依赖 [guizang-social-card-skill](https://github.com/op7418/guizang-social-card-skill)。它们不参与第二大脑的 `bind_vault.py` 绑定流程。
+本仓库首页的 [`skills/`](skills/) 直接展示全部技能，[`scripts/`](scripts/) 保存第二大脑路径绑定脚本。接入第二大脑时，将该组八个技能复制到目标 Obsidian 仓库的 `.agents/skills/`，并将绑定脚本复制到 `.agents/scripts/`；先运行 `pandora-onboard`，由它确认实际仓库路径并检查所需结构。复制或搬迁仓库后重新绑定路径。之后可以按名称调用，例如 `$pandora-triage`、`$pandora-query`。学习技能可复制到所用 Agent 工具的技能目录并按各自 `SKILL.md` 使用。自媒体技能 `xhs-writer`、`xhs-title-writer`、`pandora-infographic-cards` 可单独复制到所用 Agent 工具的技能目录；使用前按下一节，把文中的 `{{你的仓库}}` 和其他占位符换成你自己的路径与名称。`pandora-infographic-cards` 的渲染依赖 [guizang-social-card-skill](https://github.com/op7418/guizang-social-card-skill)。它们不参与第二大脑的 `bind_vault.py` 绑定流程。
+
+### 自媒体技能的目录与占位符
+
+三个自媒体技能按同一套仓库布局读写文件。使用前替换下面全部占位符。
+
+```
+{{你的仓库}}/
+├── assets/
+│   ├── brand.md        # 品牌规范（品牌素材管家生成）
+│   └── 素材库/         # 范文参考、爆款标题、选题灵感、数据案例
+└── 内容创作/
+    ├── 00-选题库/      # 审核通过的选题卡（status: idea）
+    ├── 01-草稿/        # 写手交的图文稿（status: draft）
+    ├── 02-待发布/      # 配好图的成品，等你点发布
+    ├── 03-已发布/      # 发布完成归档
+    ├── 88-已归档/      # 放弃的选题、过期的草稿
+    └── 99-内容模板/    # 内容创作模板
+```
+
+| 占位符 | 含义 |
+| --- | --- |
+| `{{你的仓库}}` | 你的 Obsidian 仓库根目录 |
+| `{{你的IP名}}` | 创作者人设或 IP 角色名 |
+| `{{你的品牌名}}` | 品牌或账号名 |
+| `{{你的产品名}}` | 你要推广的产品；档位、赠品和价格写在 `assets/brand.md` |
+| `{{你的账号定位}}` | 账号的内容方向 |
+| `{{你的目标人群}}` | 默认受众 |
 
 ## 关于《潘多拉的数字花园·第二大脑》
 
